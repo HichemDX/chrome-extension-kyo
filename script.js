@@ -20,23 +20,9 @@
         page2.style.flexDirection = 'column';
         page1.style.display = 'none';
         nameI.innerHTML = localStorage.getItem('name');
-        // object = {
-        //     name: localStorage.getItem('name'),
-        //     slctVal: localStorage.getItem('slctVal')
-        // } 
-        // send();
+        
+        
     }
-    // async function send (){
-    //     //send the object to local host 5000 /send_credentials
-    //     const response = await fetch('http://localhost:5000/send_credentials', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(object)
-    //     });
-    //     const data = await response.json(); 
-    // }
     //get the value of the input
     btn.addEventListener('click', () => {
         const val = inp.value;
@@ -50,7 +36,19 @@
         page2.style.display = 'flex';
         page2.style.flexDirection = 'column';
         page1.style.display = 'none';
-        nameI.innerHTML = localStorage.getItem('name');}
+        nameI.innerHTML = localStorage.getItem('name');
+        object = {
+            name: localStorage.getItem('name'),
+            slctVal: localStorage.getItem('slctVal')
+        } 
+        console.log(object);
+        fetch('http://localhost:5000/send_credentials', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(object)
+        })}
         else{
             //add a message under the input that says "please enter a name"
         }

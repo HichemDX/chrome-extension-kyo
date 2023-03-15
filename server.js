@@ -3,17 +3,21 @@ const app = express();
 const cors = require("cors");
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 app.use(cors());
 const port = 5000;
 
 app.use(express.json());
+let credentials = {};
+app.post("/send_credentials", (req, res) => {
+ credentials = req.body;
+})
 
-// app.get("/send_credentials", (req, res) => {
-//   console.log(req.body);
-// })
-
+app.get("/get_credentials", (req, res) => {
+  console.log(credentials);
+  res.send(credentials);
+});
 app.post("/get_response", async (req, res) => {
   const Prompt = req.body.prompt;
 
