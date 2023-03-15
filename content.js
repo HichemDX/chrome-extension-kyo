@@ -5,7 +5,7 @@ window.onhashchange = function () {
   ) {
     var subject = document.querySelector(".hP").innerText;
     var body = document.querySelector(".ii.gt").innerText;
-
+    //get the name from local storage
     const Prompt =
       'write a response to the fellowing email: " ' +
       body +

@@ -7,26 +7,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    .inp {
-      height: 30px;
-      width: 150px;
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-weight: regular;
     }
+    .inp {
+      height: 40px;
+      width: 180px;
+      border-radius: 15px;
+      background-color: rgba(19, 33, 34, 0.81);
+      outline: none;
+      color: white;
+      appearance: none;
+      border: none;
+      padding: 0 10px;
+      font-size: 12px;
+      
+      -webkit-appearance: none; box-shadow: none !important;
+    }
+    button{
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: 200;
+      color: white;
+      border: none;
+      background-color: rgba(229, 0, 67, 1);
+      cursor: pointer;
+    }
+    ::-webkit-input-placeholder { /* Edge */
+  color: white;
+  font-weight: 100;
+}
+.in{
+  fill: white;
+  position: absolute;
+  right:45px
+
+}
+html{
+  border-radius: 20px;
+}
+.wrapper{
+  display: flex;
+  align-items: center;
+}
+.settings{
+  cursor: pointer;
+}
+h2{
+  cursor: pointer;
+  height: 40px;
+      width: 220px;
+      border-radius: 15px;
+      background-color: rgba(229, 0, 67, 1);
+      outline: none;
+      color: white;
+      appearance: none;
+      border: none;
+      padding: 0 20px;
+      font-size: 12px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      font-weight: 500;
+}
+.name{
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(19, 33, 34, 0.81);
+  margin-bottom: 10px;
+}
+.wrap1{
+  width: 200px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
   </style>
+  
 </head>
 
-<body style="height: 200px; width: 250px;">
-  <div
-    style="display: flex; flex-direction: column; justify-items: center; align-items: center; justify-content: center; gap: 20px;">
-    <input type="text" class="inp">
-    <select name="langauge select" id="" class="inp">
-      <option disabled selected>Select a language</option>
-      <option value="english">english</option>
-      <option value="french">French</option>
-      <option value="spanish">Spanish</option>
-      <option value="german">German</option>
-    </select>
+<body style="background-color: transparent; border-radius:10px; padding: 20px;">
+  <div class="page1"
+    style= "display: flex; flex-direction: column;
+     justify-items: center; align-items: center;
+      justify-content: center; gap: 20px;
+      border-radius: 10px; background-color: white; width: 210px; height:200px">
+     <div class="wrapper">
+      <input type="text" class="inp" placeholder="Name">
+      <svg class="in" width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.8125 0H8.811C8.95352 4.36819e-05 9.09071 0.0541834 9.19484 0.15148C9.29898 0.248776 9.36231 0.381974 9.37202 0.52416C9.38173 0.666346 9.33711 0.806919 9.24718 0.917474C9.15724 1.02803 9.02869 1.10032 8.8875 1.11975L8.811 1.125H7.875V13.875H8.80875C8.94468 13.875 9.07601 13.9242 9.17845 14.0136C9.28089 14.1029 9.34751 14.2263 9.366 14.361L9.37125 14.4375C9.37125 14.5734 9.32202 14.7048 9.23268 14.8072C9.14333 14.9096 9.01992 14.9763 8.88525 14.9948L8.80875 15H5.8125C5.66998 15 5.53279 14.9458 5.42866 14.8485C5.32452 14.7512 5.2612 14.618 5.25148 14.4758C5.24177 14.3337 5.28639 14.1931 5.37632 14.0825C5.46626 13.972 5.59481 13.8997 5.736 13.8802L5.8125 13.875H6.75V1.125H5.8125C5.67657 1.12499 5.54524 1.07577 5.4428 0.986425C5.34036 0.897081 5.27374 0.773665 5.25525 0.639L5.25 0.5625C5.25001 0.426572 5.29923 0.295243 5.38858 0.192802C5.47792 0.0903606 5.60134 0.0237362 5.736 0.00524998L5.8125 0ZM12.1845 2.24775C12.8308 2.24835 13.4504 2.50534 13.9074 2.96234C14.3644 3.41933 14.6214 4.03897 14.622 4.68525L14.625 10.3133C14.6254 10.9358 14.3876 11.5349 13.9603 11.9876C13.5329 12.4403 12.9485 12.7123 12.327 12.7477L12.1875 12.7515H8.62875V11.6265H12.231C12.5717 11.6154 12.8947 11.4721 13.1316 11.227C13.3684 10.9818 13.5006 10.6541 13.5 10.3133L13.4978 4.6845C13.4972 4.33633 13.3585 4.00261 13.1121 3.75655C12.8658 3.51049 12.5319 3.3722 12.1838 3.372H8.62875V2.247H12.1838L12.1845 2.24775ZM6 2.24775V3.37275H2.4375C2.0894 3.37275 1.75556 3.51103 1.50942 3.75717C1.26328 4.00331 1.125 4.33715 1.125 4.68525V10.3133C1.125 11.0385 1.713 11.6257 2.4375 11.6257H5.99625V12.7507H2.4375C1.79103 12.7507 1.17105 12.4939 0.713927 12.0368C0.256807 11.5797 0 10.9597 0 10.3133V4.68525C0 4.03878 0.256807 3.4188 0.713927 2.96168C1.17105 2.50456 1.79103 2.24775 2.4375 2.24775H6Z"/>
+        </svg>  
+     </div>
+     <div class="wrapper">
+      <select name="langauge select" id="" class="inp">
+        <option disabled selected>Select a language</option>
+        <option value="english">english</option>
+        <option value="french">French</option>
+        <option value="spanish">Spanish</option>
+        <option value="german">German</option>
+      </select>
+      <svg class="in" width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 10.1812C7.6 10.1812 7.69375 10.1657 7.78125 10.1347C7.86875 10.1037 7.95 10.0505 8.025 9.975L9.975 8.025C10.1125 7.8875 10.1812 7.7125 10.1812 7.5C10.1812 7.2875 10.1125 7.1125 9.975 6.975C9.8375 6.8375 9.6625 6.76875 9.45 6.76875C9.2375 6.76875 9.0625 6.8375 8.925 6.975L8.25 7.65V5.25C8.25 5.0375 8.178 4.85925 8.034 4.71525C7.89 4.57125 7.712 4.4995 7.5 4.5C7.2875 4.5 7.10925 4.572 6.96525 4.716C6.82125 4.86 6.7495 5.038 6.75 5.25V7.65L6.075 6.975C5.9375 6.8375 5.7625 6.76875 5.55 6.76875C5.3375 6.76875 5.1625 6.8375 5.025 6.975C4.8875 7.1125 4.81875 7.2875 4.81875 7.5C4.81875 7.7125 4.8875 7.8875 5.025 8.025L6.975 9.975C7.05 10.05 7.13125 10.103 7.21875 10.134C7.30625 10.165 7.4 10.1807 7.5 10.1812ZM7.5 15C6.4625 15 5.4875 14.803 4.575 14.409C3.6625 14.015 2.86875 13.4807 2.19375 12.8062C1.51875 12.1312 0.9845 11.3375 0.591 10.425C0.1975 9.5125 0.0005 8.5375 0 7.5C0 6.4625 0.197 5.4875 0.591 4.575C0.985 3.6625 1.51925 2.86875 2.19375 2.19375C2.86875 1.51875 3.6625 0.9845 4.575 0.591C5.4875 0.1975 6.4625 0.0005 7.5 0C8.5375 0 9.5125 0.197 10.425 0.591C11.3375 0.985 12.1312 1.51925 12.8062 2.19375C13.4812 2.86875 14.0157 3.6625 14.4097 4.575C14.8037 5.4875 15.0005 6.4625 15 7.5C15 8.5375 14.803 9.5125 14.409 10.425C14.015 11.3375 13.4807 12.1312 12.8062 12.8062C12.1312 13.4812 11.3375 14.0157 10.425 14.4097C9.5125 14.8037 8.5375 15.0005 7.5 15Z"/>
+        </svg>   
+     </div> 
+    
     <button>Save</button>
   </div>
-</body>
 
+  <div class="page2" style="display: none; flex-direction: column;
+  justify-items: center; align-items: center;
+   justify-content: center; gap: 20px;
+   border-radius: 10px; background-color: white; padding: 20px 10px;">
+    <div class="wrap1">
+      <h1 class="name"></h1>
+      <svg width="15" height="15" viewBox="0 0 15 15" class="settings"
+      style="position: absolute; right:45px" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 15.6351C5 7.00009 12.0001 0 20.6351 0H229V152.365C229 161 222 168 213.365 168H20.6351C12.0001 15 5 161 5 15.365V15.6351Z" fill="black"/>
+      </svg>
+    </div>
+    <div  class="wrapper">
+      <h2 class="favor">Favorite Mail</h2>
+      <svg class="in" width="16" height="15" viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.7391 5.71579L10.0809 5.22632L7.86957 0L5.65822 5.23421L0 5.71579L4.29678 9.45L3.00617 15L7.86957 12.0553L12.733 15L11.4502 9.45L15.7391 5.71579ZM7.86957 10.5789L4.91061 12.3711L5.69756 8.99211L3.08487 6.71842L6.53174 6.41842L7.86957 3.23684L9.21526 6.42632L12.6621 6.72632L10.0494 9L10.8364 12.3789L7.86957 10.5789Z" fill="white"/>
+        </svg>
+        
+    </div>
+    <div  class="wrapper">
+      <h2 class="favor">Reply All</h2>  
+    </div>
+  </div>
+</body>
+<script src="./script.js"></script>
 </html>

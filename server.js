@@ -10,6 +10,10 @@ const port = 5000;
 
 app.use(express.json());
 
+// app.get("/send_credentials", (req, res) => {
+//   console.log(req.body);
+// })
+
 app.post("/get_response", async (req, res) => {
   const Prompt = req.body.prompt;
 
