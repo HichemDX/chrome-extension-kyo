@@ -1,0 +1,16 @@
+{
+  "name": "Hello Chrome",
+  "description": "The advance extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": ["*://*/*"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
