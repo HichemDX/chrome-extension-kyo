@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .popeup {
+    background-color: #EEEEEE;
+    height: 504px;
+    width: 876px;
+    margin-top: 4%;
+    border-radius: 10px;
+
+
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  .popeuxp2 {
+    background-color: #13212B;
+    height: 402px;
+    width: 830px;
+    border-radius: 10px;
+
+
+
+  }
+
+
+
+  .reload {
+    position: relative;
+    right: -350px;
+    top: 50px;
+  }
+
+  .star {
+    position: relative;
+    right: -350px;
+    top: 50px;
+  }
+
+  .send11 {
+    position: relative;
+    right: 220px;
+    top: 30px;
+  }
+
+  .sendx {
+    position: relative;
+    right: -230px;
+    top: 30px;
+  }
+
+  .hichem {
+    display: none;
+  }
+
+  .popeup {
+    background-color: #EEEEEE;
+    height: 504px;
+    width: 876px;
+    margin-top: 4%;
+    border-radius: 10px;
+
+    position: relative;
+
+    justify-content: center;
+    padding-block: 50px;
+  }
+
+  .popeuxp2 {
+    background-color: #13212B;
+    margin-top: 20px;
+    height: 402px;
+    width: 830px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+
+  .par {
+    color: white;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 90%;
+    height: 70%;
+    font-size: 16px;
+    line-height: 25px;
+
+
+  }
+
+  .bu-send {
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    color: white;
+    background: #E50043;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-right: 35%;
+
+
+  }
+
+  .bu-new {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    background: #E50043;
+    border: none;
+    margin-top: 10px;
+    margin-right: -80%;
+    cursor: pointer;
+
+
+  }
+
+  .dropbtn {
+    background-color: #13212B;
+    color: white;
+    width: 300px;
+    border-radius: 6px;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropbtn:hover,
+  .dropbtn:focus {
+    background-color: #263642;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 300px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown a:hover {
+    background-color: #ddd;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .closediv {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 50px;
+    background: #E50043;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .close {
+    font-size: 40px;
+    color: white;
+  }
+</style>
+
+<body>
+  <div class="med">
+    <center>
+      <div class="popeup">
+        <div class="closediv">
+          <span class="close">&times;</span>
+        </div>
+        <div class="popeuxp2">
+
+
+          <textarea class="par">
+            Bonjour,
+            Je vous remercie pour votre courriel concernant ma participation au ICT MAGHREB 2023. Je suis ravi d'être
+            parmi les inscrits et impatient d'y assister. Je me suis connecté à mon compte mobile en utilisant les
+            informations de connexion que vous m'avez fournies. Tout fonctionne correctement, et je suis reconnaissant
+            de la facilité d'utilisation de l'application mobile. Je suis excité de participer à cet événement, et
+            j'apprécie l'engagement et l'effort que vous avez consacré à son organisation. Merci encore pour toutes les
+            informations utiles, et j'ai hâte de vous rencontrer très prochainement. Cordialement,
+            Khellaf Hichem
+          </textarea>
+          <button class="bu-new">New</button>
+        </div>
+
+        <button class="bu-send">Send</button>
+
+        <div class="dropdown">
+          <select class="dropbtn">
+            <option selected>Type of response</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Negative">Negative</option>
+            <option value="Positive">Positive</option>
+          </select>
+        </div>
+      </div>
+
+    </center>
+  </div>
+</body>
+<script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+
+</html>

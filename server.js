@@ -3,19 +3,19 @@ const app = express();
 const cors = require("cors");
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 app.use(cors());
 const port = 5000;
 
 app.use(express.json());
 let credentials = {};
+let sated = "";
 app.post("/send_credentials", (req, res) => {
- credentials = req.body;
-})
+  credentials = req.body;
+});
 
 app.get("/get_credentials", (req, res) => {
-  console.log(credentials);
   res.send(credentials);
 });
 app.post("/get_response", async (req, res) => {
@@ -31,6 +31,15 @@ app.post("/get_response", async (req, res) => {
   res.send(completion.data.choices[0].message);
 });
 
+app.post("/set_popup", async (req, res) => {
+  sated = req.body.page;
+  console.log(sated);
+});
+app.get("/get_popup", (req, res) => {
+  console.log(sated);
+  res.send(sated);
+});
+
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`server started at port: ${port}`);
 });
